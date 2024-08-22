@@ -1,0 +1,108 @@
+/* Header container styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  /* margin-bottom: 50px; */
+  width: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+/* Logo container styling */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Allow the logo container to take up available space */
+}
+
+/* Logo styling */
+.logo {
+  height: 40px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Logo text styling */
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Navigation styling */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1; /* Allow the nav container to take up available space */
+}
+
+/* Navigation list styling */
+.navList {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
+}
+
+/* Navigation item styling */
+.navItem {
+  padding: 10px;
+  color: #555;
+  text-decoration: none;
+}
+
+.navItem.active {
+  color: #cc2900;
+  font-weight: bold;
+  border-bottom: 2px solid #cc2900;
+}
+/* Navigation link styling */
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .logoContainer {
+    margin-bottom: 1rem; /* Add margin below the logo container */
+  }
+
+  .nav {
+    width: 100%; /* Full width for nav on smaller screens */
+    display: block; /* Stack nav items vertically */
+  }
+
+  .navList {
+    display: block; /* Stack nav items vertically */
+  }
+
+  .navItem {
+    margin: 0; /* Remove side margin for stacked layout */
+    margin-bottom: 1rem; /* Add bottom margin for spacing */
+  }
+
+  .navItem:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+  }
+}

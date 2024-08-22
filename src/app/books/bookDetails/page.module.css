@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+}
+
+.media {
+  width: 40%;
+  height: auto;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 16px 24px;
+}
+
+.buyButton {
+  margin-top: 16px;
+}

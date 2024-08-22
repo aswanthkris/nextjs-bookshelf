@@ -1,0 +1,91 @@
+/* Outer container to center the content and adjust height */
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px; /* Add padding to left and right for small screens */
+  padding-right: 10px;
+}
+
+/* Container for the form sections */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; /* Ensure container is responsive */
+}
+
+/* Common heading section styles */
+.headingSection {
+  margin-bottom: 20px; /* Adjust margin for smaller screens */
+  text-align: center;
+  padding: 0 10px; /* Add padding for smaller screens */
+}
+
+.headingSection h1 {
+  font-size: 1.5rem; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  color: #333;
+  background: linear-gradient(45deg, #ff6f61, #5c4f4f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Reduce shadow for smaller screens */
+  padding: 5px; /* Adjust padding for smaller screens */
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Form section styling to align signup and login boxes */
+.formSection {
+  display: flex;
+  flex-direction: column; /* Stack boxes vertically on small screens */
+  width: 100%;
+  max-width: 100%; /* Ensure form section is responsive */
+  gap: 20px; /* Space between the two sections on small screens */
+}
+
+/* Individual box styling */
+.signupSection,
+.loginSection {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 100%; /* Ensure boxes take full width */
+  max-width: 600px; /* Limit max width for larger screens */
+  margin: 0 auto; /* Center the boxes */
+}
+
+/* Form element styling for inner elements */
+.signupSection h2,
+.loginSection h2 {
+  color: white;
+}
+/* Button styling */
+.gradientButton {
+  background: linear-gradient(
+    45deg,
+    #ff6f61,
+    #d32f2f
+  ); /* Gradient background */
+  color: white; /* Text color to ensure readability */
+  border-radius: 8px; /* Matching border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a bit of depth */
+}
+
+.gradientButton:hover {
+  background: linear-gradient(
+    45deg,
+    #d32f2f,
+    #ff6f61
+  ); /* Reverse gradient on hover */
+}
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .formSection {
+    flex-direction: row; /* Align boxes side by side on larger screens */
+    gap: 20px; /* Space between the two sections */
+  }
+}
