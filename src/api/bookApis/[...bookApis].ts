@@ -58,7 +58,7 @@ export const booksCommonGetRequest = async (
 
 export const GET_API_ENDPOINTS = {
   fetchAllBooks: "/getAllBooks",
-  fetchSingleBook: "/getSingleBooks",
+  fetchSingleBook: "/getSingleBook",
 };
 export const POST_API_ENDPOINTS = {
   addNewBook: "/addBook",
@@ -88,6 +88,22 @@ export const fetchAllBooksApi = async (payload: object) => {
   //API FOR FETCHING ALL BOOKS DETAILS
   const response = await booksCommonGetRequest(
     GET_API_ENDPOINTS.fetchAllBooks,
+    payload
+  )
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.log(error);
+      return null;
+    });
+  return response;
+};
+
+export const fetchOneBook = async (payload: object) => {
+  //API FOR FETCHING ALL BOOKS DETAILS
+  const response = await booksCommonGetRequest(
+    GET_API_ENDPOINTS.fetchSingleBook,
     payload
   )
     .then((response) => {
