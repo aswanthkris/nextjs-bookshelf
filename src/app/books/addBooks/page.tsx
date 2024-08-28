@@ -264,7 +264,7 @@ const AddBooks: React.FC = () => {
           <LoadingButton
             type="submit"
             variant="contained"
-            color="primary"
+            color="error"
             className={styles.submitButton}
             loading={addBookLoading}
           >

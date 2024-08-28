@@ -51,13 +51,9 @@ const BookDetails: React.FC = () => {
           Language: {book && book.language}
         </Typography>
         <Typography variant="h5" gutterBottom>
-          Price: ${book && book.price}
+          Price: ₹ {book && book.price}
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          className={styles.buyButton}
-        >
+        <Button variant="contained" color="error" className={styles.buyButton}>
           Add to Cart
         </Button>
       </CardContent>

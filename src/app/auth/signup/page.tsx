@@ -41,6 +41,7 @@ const Signup: React.FC = () => {
   //API CALL FUNCTIONS>>>
   const signupApiCall = async (payload: object) => {
     setSignupLoading(true);
+    console.log("signup payload", payload);
     const response = await signupUserApi(payload);
     setSignupLoading(false);
     console.log("response", response);
